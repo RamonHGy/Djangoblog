@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Blog</title>
+    </head>
+    <body>
+        <header>
+            <h1 class="header"><a href="#"> Blog R</a></h1>
+        </header>
+
+    {% for post in posts %}
+    <article>
+        <time>published: {{ post.published_date }}</time>
+        <h2><a href="">{{ post.title }}</a></h2>
+        <p>{{ post.text|linebreaksbr }}</p>
+    </article>
+    {% endfor %}
+
+
+    </body>
+</html>
